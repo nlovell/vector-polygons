@@ -18,7 +18,7 @@ export type Points = Array<Point>;
  * @param precision optional digits of precision for output coordinates. Default 4
  * @returns array of coordinates
  */
-export function Polygon(poly: IPolygon, precision?: number) {
+export function polygonCoordinates(poly: IPolygon, precision?: number) {
   const rotate: number = poly.rotation ? -poly.rotation : 0;
   const origin: Point = poly.origin ? poly.origin : { x: 0, y: 0 };
   const digitPrecision: number = precision ? precision : 4;

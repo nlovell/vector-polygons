@@ -23,12 +23,14 @@ const testPoly: IPolygon = {
 for (let i = 1; i < 10; i++) {
   console.log(
     desmosPastable(
-      Polygon({
-        origin: { x: 20, y: 23 },
-        sides: 9,
-        radius: 110 - i * 10,
-        rotation: i * 10,
-      })
+      Polygon(
+        {
+          sides: 9,
+          radius: 110 - i * 10,
+          rotation: i * 45,
+        },
+        10
+      )
     ) + "\n"
   );
 }

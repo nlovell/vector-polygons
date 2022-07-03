@@ -1,4 +1,4 @@
-// @ts-ignore - demo needs it, apparently
+// @ts-ignore - deno needs it, apparently
 import { IPolygon, Points, Polygon } from "../src/polygon.ts";
 
 /**

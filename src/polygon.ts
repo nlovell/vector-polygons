@@ -5,7 +5,7 @@ export interface IPolygon {
   origin?: Point;
 }
 
-interface Point {
+export interface Point {
   x: number;
   y: number;
 }
@@ -19,7 +19,7 @@ export type Points = Array<Point>;
  * @returns array of coordinates
  */
 export function Polygon(poly: IPolygon, precision?: number) {
-  const rotate: number = poly.rotation ? poly.rotation : 0;
+  const rotate: number = poly.rotation ? -poly.rotation : 0;
   const origin: Point = poly.origin ? poly.origin : { x: 0, y: 0 };
   const digitPrecision: number = precision ? precision : 4;
 

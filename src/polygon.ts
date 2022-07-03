@@ -23,21 +23,14 @@ export function polygonCoordinates(poly: IPolygon, precision?: number) {
   const origin: Point = poly.origin ? poly.origin : { x: 0, y: 0 };
   const digitPrecision: number = precision ? precision : 4;
 
-  let angles: number[] = [];
-
-  for (let index = 0; index < poly.sides; index++) {
-    angles[index] = toRadians((index * 360) / poly.sides + rotate);
-  }
-
   let points: Points = [];
 
-  for (let index = 0; index < angles.length; index++) {
-    let x = Number(
-      (poly.radius * Math.cos(angles[index]) + origin.x).toFixed(digitPrecision)
-    );
-    let y = Number(
-      (poly.radius * Math.sin(angles[index]) + origin.y).toFixed(digitPrecision)
-    );
+  for (let index = 0; index < poly.sides; index++) {
+    let rad = toRadians((index * 360) / poly.sides + rotate);
+
+    let x = rounded(poly.radius * Math.cos(rad) + origin.x, digitPrecision);
+    let y = rounded(poly.radius * Math.sin(rad) + origin.y, digitPrecision);
+
     points.push({ x: x, y: y });
   }
 
@@ -52,4 +45,8 @@ export function polygonCoordinates(poly: IPolygon, precision?: number) {
  */
 function toRadians(input: number) {
   return input * (Math.PI / 180);
+}
+
+function rounded(input: number, precision: number) {
+  return Number(input.toFixed(precision));
 }

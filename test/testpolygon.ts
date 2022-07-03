@@ -1,5 +1,5 @@
 // @ts-ignore - deno needs it, apparently
-import { IPolygon, Points, Polygon } from "../src/polygon.ts";
+import { IPolygon, Points, polygonCoordinates } from "../src/polygon.ts";
 
 /**
  * Formats an array of points into data I can use for testing
@@ -23,13 +23,13 @@ const testPoly: IPolygon = {
 for (let i = 1; i < 10; i++) {
   console.log(
     desmosPastable(
-      Polygon(
+      polygonCoordinates(
         {
           sides: 9,
           radius: 110 - i * 10,
           rotation: i * 45,
         },
-        10
+        15
       )
     ) + "\n"
   );

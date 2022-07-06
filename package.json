@@ -1,14 +1,18 @@
 {
   "name": "svg-polygon",
   "version": "0.0.1",
-  "description": "Can log \"hello world\" and \"goodbye world\" to the console!",
+  "description": "Generate [x,y] coordinates for a regular polygon of given sides and radius",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "/dist"
   ],
   "scripts": {
-    "test": "test"
+    "test": "deno test \"./test/polygon_test.ts\"",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build"
   },
   "keywords": [
     "svg",
@@ -17,10 +21,15 @@
   "author": "nlovell",
   "license": "MIT",
   "dependencies": {
-    "react": "^18.2.0",
-    "typescript": "^4.7.4"
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.14"
+    "@types/react": "^18.0.14",
+    "prettier": "^2.7.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.23.5",
+    "typedoc-plugin-markdown": "^3.13.2",
+    "typescript": "^4.7.4"
   }
 }

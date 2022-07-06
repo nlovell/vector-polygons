@@ -5,6 +5,7 @@
 
 <h1 align="center">Vector Polygons</h1>
 
+
 <div align="center">
 
 ![Status](https://img.shields.io/badge/status-active-success)
@@ -13,8 +14,7 @@
 [![License](https://img.shields.io/github/license/nlovell/vector-polygons)](/LICENSE)
 
 </div>
-
----
+<h1></h1>
 
 <p align="center"> Easily generate coordinates for regular polygons
     <br> 
@@ -59,4 +59,4 @@ To fix a bug or enhance the project, please follow these steps:
 
 ## License
 
-MIT License - found [here](./license.md)
+MIT License - found [here](./license.md).

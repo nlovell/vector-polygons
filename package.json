@@ -1,5 +1,5 @@
 {
-  "name": "svg-polygon",
+  "name": "@nlovell/polygon-coordinates",
   "version": "0.0.1",
   "description": "Generate [x,y] coordinates for a regular polygon of given sides and radius",
   "main": "dist/index.js",
